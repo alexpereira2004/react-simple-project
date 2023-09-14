@@ -1,8 +1,8 @@
-name: Manipulação de issues
+name: Handle issues
 on: issues
 jobs:
-  mensagens-de-saida:
+  output-info:
     runs-on: ubuntu-latest
     steps:
-      - name: Detalhes dos eventos
-        run: echo "${{ toJSON(github.events) }}"
+      - name: Output event details
+        run: echo "${{ toJSON(github.event) }}"
